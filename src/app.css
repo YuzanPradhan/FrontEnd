@@ -1,0 +1,71 @@
+/* src/App.css */
+body {
+  height: 100vh;
+}
+/* Flex container for the entire app */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f9fafb; /* Tailwind's bg-gray-50 */
+}
+
+/* Main content container */
+.app-main {
+  padding: 2rem; /* Tailwind's p-8 */
+  display: flex;
+  flex-direction: column;
+  width: 1500px;
+  gap: 2rem; /* Tailwind's gap-8 */
+}
+
+/* For large screens, flex the items in a row */
+@media (min-width: 1024px) {
+  .app-main {
+    flex-direction: row;
+  }
+}
+
+/* For flex 1 behavior */
+.flex-1 {
+  flex: 1;
+}
+
+/* General button styling */
+.button {
+  padding: 0.5rem 1rem; /* Adjust padding for comfortable size */
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.575rem; /* Rounded corners */
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Gradient background */
+.button-primary {
+  background: linear-gradient(135deg, rgb(81, 95, 132), rgb(61, 73, 102));
+}
+
+.button-secondary {
+  border-radius: 0.575rem; 
+  background: linear-gradient(135deg, rgb(95, 108, 145), rgb(70, 82, 112));
+}
+
+/* Hover effects */
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Active state */
+.button:active {
+  transform: translateY(0); /* Reset transform for pressed effect */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional extra padding for larger buttons */
+.button-large {
+  padding: 0.75rem 1.25rem;
+}

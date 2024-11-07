@@ -1,0 +1,46 @@
+.overview-container {
+  background: linear-gradient(
+    to top,
+    hsl(210, 20%, 96%),
+    hsl(222deg 100% 19.37%)
+  );
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  color: white;
+}
+
+.overview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.overview-header .name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.overview-header .buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.overview-info {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.overview-info .item {
+  text-align: center;
+}
+
+.overview-info .item .value {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.overview-info .item .label {
+  font-size: 0.875rem;
+}
