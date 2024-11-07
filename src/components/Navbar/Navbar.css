@@ -1,0 +1,42 @@
+/* src/components/Navbar/Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, rgb(81, 95, 132), rgb(61, 73, 102));
+  color: #ffffff;
+  width: calc(100% - 250px); /* Full width minus sidebar width */
+  margin-left: -32px; /* Offset by sidebar width */
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  margin-right: 10px;
+}
+.navbar {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar logo */
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Navbar links container */
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Individual link styles */
+.navbar-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar-link:hover {
+  color: #cdd3e0; /* Lighter shade on hover */
+}

@@ -2,9 +2,9 @@
 export interface Reviewer {
   id: string;
   letter: string;
-  type: string;
+  type: string; // This property is required in each reviewer object
   department: string;
-  status: "Approved" | "Pending";
+  status: string;
   accepted: boolean;
 }
 

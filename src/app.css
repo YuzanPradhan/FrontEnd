@@ -1,3 +1,6 @@
+* {
+  margin: 0;
+}
 /* src/App.css */
 body {
   height: 100vh;
@@ -5,23 +8,31 @@ body {
 /* Flex container for the entire app */
 .app-container {
   display: flex;
+  flex-direction: column;
   min-height: 100vh;
-  background-color: #f9fafb; /* Tailwind's bg-gray-50 */
 }
 
-/* Main content container */
-.app-main {
-  padding: 2rem; /* Tailwind's p-8 */
+.app-main-container {
   display: flex;
-  flex-direction: column;
-  width: 1500px;
-  gap: 2rem; /* Tailwind's gap-8 */
+  flex: 1;
+}
+
+.main-content {
+  margin-left: 250px; /* Offset by sidebar width */
+  padding-top: 80px; /* Space for the fixed navbar */
+  padding: 20px;
+}
+
+.app-main {
+  flex: 1;
+  padding: 2rem;
+  background-color: #f9fafb; /* Light background for contrast */
 }
 
 /* For large screens, flex the items in a row */
 @media (min-width: 1024px) {
   .app-main {
-    flex-direction: row;
+    flex-direction: column;
   }
 }
 
@@ -49,7 +60,7 @@ body {
 }
 
 .button-secondary {
-  border-radius: 0.575rem; 
+  border-radius: 0.575rem;
   background: linear-gradient(135deg, rgb(95, 108, 145), rgb(70, 82, 112));
 }
 

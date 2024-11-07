@@ -1,10 +1,11 @@
 // src/App.tsx
 import React from "react";
+import Navbar from "./components/Navbar/Navbar";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Overview from "./components/Overview/Overview";
 import ReviewCycle from "./components/ReviewCycle/ReviewCycle";
 import ReviewDashboard from "./components/ReviewDashboard/ReviewDashboard";
-import "./App.css"; // Import the custom CSS
+import "./App.css";
 
 const App: React.FC = () => {
   const reviewCycleData = {
@@ -19,34 +20,36 @@ const App: React.FC = () => {
     {
       id: "1",
       letter: "A",
-      type: "Anonymous Reviewer",
+      type: "Anonymous Reviewer", // Added 'type' property
       department: "Backend",
-      status: "Approved" as const,
+      status: "Approved",
       accepted: true,
     },
     {
       id: "2",
       letter: "B",
-      type: "Anonymous Reviewer",
+      type: "Anonymous Reviewer", // Added 'type' property
       department: "Mobile",
-      status: "Approved" as const,
+      status: "Approved",
       accepted: true,
     },
     {
       id: "3",
       letter: "C",
-      type: "Anonymous Reviewer",
+      type: "Anonymous Reviewer", // Added 'type' property
       department: "Data",
-      status: "Pending" as const,
+      status: "Pending",
       accepted: false,
     },
   ];
 
   return (
     <div className="app-container">
-      <Sidebar />
-      <main className="app-main">
-        <div className="flex-1">
+     
+      <div className="app-main-container">
+        <Sidebar />
+        <main className="app-main"> 
+          <Navbar />
           <Overview
             name="John"
             completionRate={85}
@@ -54,10 +57,9 @@ const App: React.FC = () => {
             days={14}
           />
           <ReviewCycle cycle={reviewCycleData} />
-
           <ReviewDashboard reviewers={reviewers} />
-        </div>
-      </main>
+        </main>
+      </div>
     </div>
   );
 };
